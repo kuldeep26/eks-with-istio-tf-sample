@@ -159,7 +159,7 @@ variable "istio_ingress_max_pods" {
 variable "enable_prometheus_stack" {
   type        = bool
   description = ""
-  default     = true
+  default     = false
 }
 
 variable "grafana_virtual_service_host" {
@@ -256,7 +256,7 @@ variable "node_termination_handler_toggle" {
 variable "argo_rollouts_toggle" {
   type        = bool
   description = "Enables the installation of Argo Rollouts, providing advanced deployment strategies like Canary and Blue-Green deployments in Kubernetes."
-  default     = true
+  default     = false
 }
 
 variable "keda_toggle" {
