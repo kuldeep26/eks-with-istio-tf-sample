@@ -31,6 +31,14 @@ provider "aws" {
   }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "eks-terraform-tfstate-demo-2"
+    key    = "services/eks-istio/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 provider "helm" {
   kubernetes {
     host                   = aws_eks_cluster.main.endpoint
